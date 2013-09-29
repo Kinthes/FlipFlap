@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Inter_tuto 1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Ogre Init" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="OgreMain_d" />
+					<Add library="OIS_d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\Ogre_intremediate_tuto_1" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin\Release\" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="OgreMain" />
+					<Add library="OIS" />
+					<Add library="libBulletDynamics.a" />
+					<Add library="libBulletCollision.a" />
+					<Add library="libLinearMath.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-mthreads" />
+			<Add option="-fmessage-length=0" />
+			<Add option="-fexceptions" />
+			<Add option="-fident" />
+			<Add option="-DWIN32" />
+			<Add option="-D_WINDOWS" />
+			<Add directory="D:\c++\OgreSDK_mingw_v1-7-2\include" />
+			<Add directory="D:\c++\OgreSDK_mingw_v1-7-2\include\OGRE" />
+			<Add directory="D:\c++\OgreSDK_mingw_v1-7-2\boost_1_44" />
+			<Add directory="D:\c++\OgreSDK_mingw_v1-7-2\include\OIS" />
+			<Add directory="D:\c++\code\tools\bullet-2.79\src" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,--enable-auto-image-base" />
+			<Add option="-Wl,--add-stdcall-alias" />
+			<Add option="-Wl,--enable-auto-import" />
+			<Add directory="D:\c++\OgreSDK_mingw_v1-7-2\bin" />
+			<Add directory="D:\c++\OgreSDK_mingw_v1-7-2\bin\$(TARGET_NAME)" />
+			<Add directory="D:\c++\code\tools\bullet-2.79\lib" />
+		</Linker>
+		<Unit filename="BCube.cpp" />
+		<Unit filename="BCube.h" />
+		<Unit filename="BSphere.cpp" />
+		<Unit filename="BSphere.h" />
+		<Unit filename="MyMotionState.h" />
+		<Unit filename="OgreInit.cpp" />
+		<Unit filename="OgreInit.h" />
+		<Unit filename="start.cpp" />
+		<Unit filename="start.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
